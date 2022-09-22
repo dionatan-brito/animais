@@ -5,6 +5,11 @@ import {
     initAnimaScroll
 } from "../js/modules/scrollsuave.js";
 
+import initModal from "../js/modules/modal.js"
+
+import initTooltip from "../js/modules/tooltip.js"
+
+
 
 initTabNav();
 
@@ -14,3 +19,7 @@ initAccordion();
 initScrollSuave();
 
 initAnimaScroll();
+
+initModal();
+
+initTooltip();

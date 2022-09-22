@@ -125,7 +125,7 @@
 
   <section class="grid-section contato" id="contato" data-anima="scroll">
     <h1 class="titulo" id="titulo">Contato</h1>
-    <div class="mapa">
+    <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento">
       <img src="img/mapa.png">
     </div>
     <ul class="dados">
@@ -149,15 +149,12 @@
         <label for="email">Email</label>
         <input type="text" for="email" id="email">
         <label for="senha">Senha</label>
-        <input type="password" for="senha" id="senha">
+        <input type="current-password" for="senha" id="senha">
         <button type="submit">Login</button>
       </form>
     </div>
   </section>
 
-  
-
-  <script type = "module" src="/dataset/animacoes.js"></script>  
-  <script src="scripts.js"></script>  
+  <script type = "module" src="/dataset/animacoes.js"></script>    
 </body>
 </html>
