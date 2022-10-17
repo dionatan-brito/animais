@@ -29,27 +29,31 @@ export function initScrollSuave() {
     }
 }
 
-export function initAnimaScroll(){
+export function initAnimaScroll() {
 
     const sections = document.querySelectorAll('[data-anima="scroll"]');
-    console.log(sections)
-    if(sections.length){
-    
+    if (sections.length) {
+
         const telausuario = window.innerHeight * 0.6;
-        
-        function animaScroll(){
+
+        function animaScroll() {
             sections.forEach(section => {
-             const sectionTop = section.getBoundingClientRect().top;
-             const isSectionVisible = (sectionTop - telausuario) < 0;
-             if(isSectionVisible)
-                section.classList.add("ativo");  
-             else
-             section.classList.remove("ativo");
+                const sectionTop = section.getBoundingClientRect().top;
+                const isSectionVisible = (sectionTop - telausuario) < 0;
+                if (isSectionVisible) {
+
+                    section.classList.add("ativo");
+                } else if (section.classList.contains("ativo")) {
+
+                    section.classList.remove("ativo");
+                }
             })
+
         }
-        
-        window.addEventListener("scroll", animaScroll);
-        
+
         animaScroll();
+
+        window.addEventListener("scroll", animaScroll);
+
     }
 }
